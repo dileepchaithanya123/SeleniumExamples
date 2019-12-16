@@ -10,15 +10,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AddRemoveElements {
-    WebDriver driver;
+public class AddRemoveElements extends OpenBrowser {
 
     @BeforeTest
     public void setUp() {
 
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\dponnuru\\IdeaProjects\\SeleniumExamples\\src\\test\\Drivers\\Firefox\\geckodriver_71.exe");
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
+        openFireFoxBrowser();
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
     }
 

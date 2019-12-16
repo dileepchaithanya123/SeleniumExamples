@@ -21,7 +21,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class Selenium_BrokenImage_Test {
+public class Selenium_BrokenImage_Test extends OpenBrowser{
 
     WebDriver driver;
     int invalidImageCount;
@@ -29,9 +29,7 @@ public class Selenium_BrokenImage_Test {
     @BeforeTest
     public void setUp() {
 
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\dponnuru\\IdeaProjects\\SeleniumExamples\\src\\test\\Drivers\\Firefox\\geckodriver_71.exe");
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
+       openFireFoxBrowser();
         driver.get("http://the-internet.herokuapp.com/broken_images");
     }
 
